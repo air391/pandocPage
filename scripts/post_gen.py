@@ -4,7 +4,8 @@ import subprocess
 # 输入和输出目录
 input_dir = 'posts'
 output_dir = 'contents'
-
+css_file = r'contents/style.css'
+template_file = r'posts/template.html'
 # 确保输出目录存在
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
@@ -17,6 +18,10 @@ for filename in os.listdir(input_dir):
         output_file = os.path.join(output_dir, os.path.splitext(filename)[0] + '.html')
         
         # 使用 Pandoc 将 Markdown 文件转换为 HTML
-        subprocess.run(['pandoc', '-s', input_file, '-o', output_file])
+        subprocess.run(['pandoc', 
+                        '-s','--toc',
+                        '--css', css_file,
+                        '--template', template_file,
+                        input_file, '-o', output_file])
 
 print("Markdown 文件转换完成。")
