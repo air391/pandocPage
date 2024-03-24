@@ -6,6 +6,7 @@ input_dir = 'posts'
 output_dir = 'contents'
 css_file = r'contents/style.css'
 template_file = r'posts/template.html'
+filter = r'scripts/filter.py'
 # 确保输出目录存在
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
@@ -22,6 +23,8 @@ for filename in os.listdir(input_dir):
                         '-s','--toc',
                         '--css', css_file,
                         '--template', template_file,
+                        '--filter', filter,
+                        '--mathml',
                         input_file, '-o', output_file])
 
 print("Markdown 文件转换完成。")
