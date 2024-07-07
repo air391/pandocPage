@@ -17,54 +17,6 @@ $if(description-meta)$
   <meta name="description" content="$description-meta$" />
 $endif$
   <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
-  <style>
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-    }
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-    }
-    nav {
-        background-color: #f4f4f4;
-        width: 200px;
-        position: fixed; /* 将侧边栏固定在页面左侧 */
-        top: 0; /* 从页面顶部开始固定 */
-        bottom: 0; /* 直到页面底部结束 */
-        overflow-y: auto; /* 如果内容高度超过侧边栏高度，显示滚动条 */
-        padding: 20px;
-        box-sizing: border-box;
-    }
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-    nav ul li {
-        margin-bottom: 10px;
-    }
-    nav ul ul {
-        margin-left: 20px;
-    }
-    main {
-        margin-left: 240px; /* 保证主内容区域不被侧边栏遮挡 */
-        padding: 20px;
-        overflow: hidden;
-    }
-    section {
-        margin-bottom: 30px;
-    }
-    section h2 {
-        color: #333;
-        border-bottom: 2px solid #ccc;
-        padding-bottom: 10px;
-    }
-  </style>
 $for(css)$
   <link rel="stylesheet" href="$css$" />
 $endfor$

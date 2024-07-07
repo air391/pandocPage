@@ -4,7 +4,7 @@ import subprocess
 # 输入和输出目录
 input_dir = 'posts'
 output_dir = 'contents'
-css_file = r'contents/style.css'
+css_file = r'style.css'
 template_file = r'posts/template.html'
 filter = r'scripts/filter.py'
 # 确保输出目录存在

@@ -93,3 +93,35 @@ footer {
     flex: 0 0 auto;
     margin-right: 10px; /* 调整 span 元素与输入输出框之间的间距 */
 }
+
+/* 容器样式 */
+.sourceCode {
+    background-color: #444446; /* 背景色 */
+    border-radius: 8px;       /* 圆角 */
+    padding: 5px;            /* 内边距 */
+    margin: 10px 0;           /* 外边距 */
+    overflow-x: auto;         /* 允许水平滚动 */
+  }
+  
+  /* 代码块样式 */
+  .sourceCode pre {
+    margin: 0;                /* 去除pre标签默认外边距 */
+    font-family: 'Fira Code', monospace; /* 设置字体为等宽字体 */
+    font-size: 14px;          /* 字体大小 */
+    color: #d8dee9;           /* 文字颜色 */
+  }
+  
+  /* 代码块中各元素的颜色 */
+  .sourceCode .kw { color: #81a1c1; }  /* 关键字 */
+  .sourceCode .cf { color: #88c0d0; }  /* 控制语句 */
+  .sourceCode .op { color: #d08770; }  /* 运算符 */
+  .sourceCode .dv { color: #ebcb8b; }  /* 常量值 */
+  
+  /* 链接的样式 */
+  .sourceCode a {
+    color: inherit;           /* 继承父元素颜色 */
+    text-decoration: none;    /* 去除下划线 */
+  }
+  .sourceCode a:hover {
+    text-decoration: underline; /* 悬停时添加下划线 */
+  }
