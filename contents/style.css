@@ -83,3 +83,13 @@ footer {
     padding: 20px;
     text-align: center;
 }
+
+.input-container, .output-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-container span, .output-container span {
+    flex: 0 0 auto;
+    margin-right: 10px; /* 调整 span 元素与输入输出框之间的间距 */
+}
