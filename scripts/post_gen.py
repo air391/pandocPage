@@ -19,6 +19,7 @@ for filename in os.listdir(input_dir):
         output_file = os.path.join(output_dir, os.path.splitext(filename)[0] + '.html')
         
         # 使用 Pandoc 将 Markdown 文件转换为 HTML
+        print("正在转换 " + input_file + " 到 " + output_file + " 中...")
         subprocess.run(['pandoc', 
                         '-s','--toc',
                         '--css', css_file,

@@ -1,37 +1,24 @@
 import os
 
 # 获取当前目录
-current_dir = './contents'
-# 获取当前目录下的所有 HTML 文件
-html_files = [f for f in os.listdir(current_dir) if f.endswith('.html') and f != 'index.html']
+current_dir = './posts'
+# 获取当前目录下的所有 md 文件
+md_files = [f[:-3] for f in os.listdir(current_dir) if f.endswith('.md') and f != 'index.md']
 
-# 生成 HTML 内容
-html_content = """
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Page</title>
-</head>
-<body>
-    <h1>Navigation Page</h1>
-    <ul>
+
+# 生成 md 内容
+md_content = """
+# Navigation Page
+
 """
 
-for html_file in html_files:
+for md_file in md_files:
     # 生成链接
-    link = f'<li><a href="{html_file}">{html_file}</a></li>'
-    html_content += link
-
-html_content += """
-    </ul>
-</body>
-</html>
-"""
+    link = f'- [{md_file}]({md_file}.html) \n'
+    md_content += link
 
 # 将内容写入 index.html 文件
-with open(os.path.join(current_dir, 'index.html'), 'w') as f:
-    f.write(html_content)
+with open(os.path.join(current_dir, 'index.md'), 'w', encoding='utf-8' ) as f:
+    f.write(md_content)
 
-print("index.html 文件已生成。")
+print("index.md 文件已生成。")
